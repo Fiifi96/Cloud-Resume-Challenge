@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>DevBlog - Virtualfi</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+    
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="landing1.html">Fiifi's Blog</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="aa1e8123-fde6-43d6-b4a7-619852c50968.jpg" alt="image" >			
+					
+					<div class="bio mb-3">Hi, my name is Fiifi Sam. I'm a DevOps/Cloud/Site Reliability Engineer.<br><a href="landing1.html">Find out more about me</a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-start">
+					<li class="nav-item">
+					    <a class="nav-link" href="resume2.html"><i class="fas fa-home fa-fw me-2"></i>Resume <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link active" href="side_project.html"><i class="fas fa-bookmark fa-fw me-2"></i>Side Projects</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link " href="landing1.html"><i class="fas fa-user fa-fw me-2"></i>About Me</a>
+					</li>
+				</ul>
+				
+				<div class="my-2 my-md-3">
+					
+				    <a class="btn btn-primary" href="cloud.html" target="_blank">Cloud Deployment</a>
+				    
+				</div>
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
+	    	    
+	    <article class="about-section py-5">
+		    <div class="container">
+			    <h2 class="title mb-3"><h2>
+			    <body>
+                    <h1>Project Architecture</h1>
+                    <p>This document describes a sophisticated DevOps project, primarily developed with HTML and CSS, that operates via Docker containers and employs continuous integration/continuous deployment (CI/CD) practices, utilizing tools such as NGINX, Jenkins, Docker, DockerHub, and GitHub. The project is structured to incorporate an automated pipeline, whereby the code's transition from GitHub repository to the final production server is seamlessly executed through a series of stages.</p>
+                
+                    <h2>Website and Server Architecture</h2>
+                    <p>The project revolves around a web interface, composed of numerous HTML files. The entry point to this website is <code>landing.html</code>, a dedicated home page. In terms of infrastructure, the website is hosted by an NGINX server, packaged within a Docker container. This setup ensures a uniform, reproducible environment and facilitates straightforward portability and scaling.</p>
+                
+                    <h2>Code Repository</h2>
+                    <p>All project-related code is stored in a private GitHub repository. This version control system ensures a robust, organized, and collaborative approach to development, as well as secure storage of all project code. It also forms the basis for the subsequent CI/CD stages, as code updates in this repository automatically initiate the pipeline.</p>
+                
+                    <h2>Continuous Integration / Continuous Deployment</h2>
+                    <p>This project incorporates a robust CI/CD pipeline, powered by Jenkins, to automate the integration, testing, and deployment stages. The pipeline is initiated whenever code is committed and pushed to the remote GitHub repository.</p>
+                
+                    <p>The pipeline consists of three main jobs:</p>
+                    <ol>
+                        <li><b>Code Integration:</b> The initial job begins by cloning the repository onto the Jenkins server. Following this, the Docker image is built. This includes downloading dependencies, running build scripts, and generating an executable Docker container that encapsulates the NGINX server with the website code.</li>
+                        <li><b>Testing and DockerHub Upload:</b> The second job takes the built Docker image and runs it in a contained environment, executing a series of tests to ensure that the system behaves as expected. Once the image passes the testing phase, it is pushed to DockerHub, a publicly available container registry service. DockerHub serves as a centralized repository for Docker images, ensuring they are accessible for deployment.</li>
+                        <li><b>Deployment:</b> The final job in the pipeline is deployment. This involves pulling the Docker image from DockerHub and running it on the production server (Azure, AWS, GCP). The server then launches the Docker container, effectively deploying the updated website code in a production environment.</li>
+                    </ol>
+                    <p>Through these automated steps, the project maintains a consistent, reliable, and efficient deployment process, reducing manual intervention and potential for error.</p>
+                </body>
+			    	    </article><!--//about-section-->
+	    
+	    
+	    
+	    <footer class="footer text-center py-2 theme-bg-dark">
+		   
+	        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+		   
+	    </footer>
+    
+    </div><!--//main-wrapper-->
+    
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+
+</body>
+</html> 
+
