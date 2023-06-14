@@ -17,5 +17,7 @@ COPY aa1e8123-fde6-43d6-b4a7-619852c50968.jpg /usr/share/nginx/html/
 COPY resume2.html /usr/share/nginx/html/
 
 # Copy projects.html files to the nginx container
-COPY side_projects.html /usr/share/nginx/html/
+COPY side_project.html /usr/share/nginx/html/
 
+# Copy web dependencies files to the nginx container
+COPY assets/ /usr/share/nginx/html/
