@@ -58,7 +58,7 @@
 				
 				<div class="my-2 my-md-3">
 					
-				    <a class="btn btn-primary" href="cloud.html" target="_blank">Cloud Deployment</a>
+				    <!-- <a class="btn btn-primary" href="cloud.html" target="_blank">Cloud Deployment</a> -->
 				    
 				</div>
 			</div>
@@ -71,14 +71,14 @@
 		    <div class="container">
 			    <h2 class="title mb-3"><h2>
 			    <body>
-                    <h1>Project Architecture</h1>
+                    <h1>Website Architecture</h1>
                     <p>This document describes a sophisticated DevOps project, primarily developed with HTML and CSS, that operates via Docker containers and employs continuous integration/continuous deployment (CI/CD) practices, utilizing tools such as NGINX, Jenkins, Docker, DockerHub, and GitHub. The project is structured to incorporate an automated pipeline, whereby the code's transition from GitHub repository to the final production server is seamlessly executed through a series of stages.</p>
                 
                     <h2>Website and Server Architecture</h2>
                     <p>The project revolves around a web interface, composed of numerous HTML files. The entry point to this website is <code>landing.html</code>, a dedicated home page. In terms of infrastructure, the website is hosted by an NGINX server, packaged within a Docker container. This setup ensures a uniform, reproducible environment and facilitates straightforward portability and scaling.</p>
                 
                     <h2>Code Repository</h2>
-                    <p>All project-related code is stored in a private GitHub repository. This version control system ensures a robust, organized, and collaborative approach to development, as well as secure storage of all project code. It also forms the basis for the subsequent CI/CD stages, as code updates in this repository automatically initiate the pipeline.</p>
+                    <p>All project-related code is stored in a private GitHub repository (<code>Cloud-Resume-Challenge</code>). This version control system ensures a robust, organized, and collaborative approach to development, as well as secure storage of all project code. It also forms the basis for the subsequent CI/CD stages, as code updates in this repository automatically initiate the pipeline.</p>
                 
                     <h2>Continuous Integration / Continuous Deployment</h2>
                     <p>This project incorporates a robust CI/CD pipeline, powered by Jenkins, to automate the integration, testing, and deployment stages. The pipeline is initiated whenever code is committed and pushed to the remote GitHub repository.</p>
@@ -90,6 +90,7 @@
                         <li><b>Deployment:</b> The final job in the pipeline is deployment. This involves pulling the Docker image from DockerHub and running it on the production server (Azure, AWS, GCP). The server then launches the Docker container, effectively deploying the updated website code in a production environment.</li>
                     </ol>
                     <p>Through these automated steps, the project maintains a consistent, reliable, and efficient deployment process, reducing manual intervention and potential for error.</p>
+					<figure><img class="img-fluid" src="Screenshot 2023-06-21 092817.png" alt="image"></figure>
                 </body>
 			    	    </article><!--//about-section-->
 	    
